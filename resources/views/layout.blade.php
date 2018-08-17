@@ -67,13 +67,18 @@
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-
-            <div class="content">
-                <div class="title m-b-md">
-                    @yield('content')
-                </div>
-            </div>
+      @if (session('success'))
+        <div class="alert alert-success">
+          {{ session('success') }}
         </div>
+      @endif
+
+      <div class="flex-center position-ref full-height">
+          <div class="content">
+              <div class="title m-b-md">
+                  @yield('content')
+              </div>
+          </div>
+      </div>
     </body>
 </html>
