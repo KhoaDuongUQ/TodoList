@@ -18,5 +18,6 @@ Route::get('/', function () {
 Route::get('/todos', 'TodosController@index')->name('todos');
 Route::get('/todo/delete/{id}', 'TodosController@delete')->name('todo.delete');
 Route::get('/todo/update/{id}', 'TodosController@update')->name('todo.update');
+Route::get('/todo/completed/{id}', 'TodosController@completed')->name('todo.completed');
 Route::post('/todo/save/{id}', 'TodosController@save')->name('todo.save');
 Route::post('/todo/create', 'TodosController@store')->name('todo.create');
